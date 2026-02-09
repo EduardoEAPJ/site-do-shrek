@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/shrek.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+
+  <title>Site de ALPHA - Proibido betas</title>
+
+</head>
+
+<body>
+
+<header class="shrek-header">
+  <img src="img/shrek.png" width="60" style="position:relative;z-index:2">
+
+  <h1>SAI DO MEU PÂNTANO</h1>
+
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <nav id="menu" class="shrek-menu">
+    <a href="index.html">🏡 Início do Pântano</a>
+
+    <div class="submenu">
+      <button onclick="toggleSubMenu()">🧅 Camadas</button>
+      <div id="subMenu">
+        <a href="#">🔥 Camada Profunda</a>
+        <a href="#">💀 Camada Proibida</a>
+        <a href="creditos.html">👑 Camada Suprema</a>
+      </div>
+    </div>
+
+    <a href="videos.html">🎥 Vídeos Ogrísticos</a>
+  </nav>
+</header>
+
+<p>
+  
+</p>
+
+
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    const sound = document.getElementById("shrekSound");
+
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "block";
+      if (sound) {
+        sound.currentTime = 0;
+        sound.play().catch(() => {});
+      }
+    }
+  }
+
+  function toggleSubMenu() {
+    const sub = document.getElementById("subMenu");
+    sub.style.display = sub.style.display === "block" ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>
